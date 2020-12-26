@@ -8,7 +8,7 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-GITHUB_PAGES_BRANCH=master
+GITHUB_PAGES_BRANCH=main
 CNAME=mattkrol.me
 
 DEBUG ?= 0
