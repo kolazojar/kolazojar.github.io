@@ -34,18 +34,18 @@
     <a href="https://mattkrol.me/tag/git.html">Git</a>
 </div>
 <div>
-    <p>I have been using <tt class="docutils literal">git</tt> frequently these days. Recently, I have been on the hunt for a script to display <tt class="docutils literal">git</tt> status information in my <tt class="docutils literal">bash</tt> prompt. This way I can easily see important <tt class="docutils literal">git</tt> repository information in my shell prompt without having to type <tt class="docutils literal">git status</tt> all of the time which would save frequent <tt class="docutils literal">git</tt> users like myself a lot of time. However, many of the existing solutions that I found were either too simplistic or complete overkill for the task at hand, so I decided to create my own.</p>
-<p>My implementation prints the name of the current <tt class="docutils literal">git</tt> branch along with some other indicators:</p>
-<ul class="simple">
-<li><tt class="docutils literal">'*'</tt> – the repository is dirty</li>
-<li><tt class="docutils literal"><span class="pre">'?'</span></tt> – untracked files exist in the repository</li>
-<li><tt class="docutils literal">'='</tt> – the local branch is in sync with the remote</li>
-<li><tt class="docutils literal">'&lt;'</tt> – the local branch is behind of the remote</li>
-<li><tt class="docutils literal">'&gt;'</tt> – the local branch is ahead of the remote</li>
-<li><tt class="docutils literal"><span class="pre">'&lt;&gt;'</span></tt> – the local branch has diverged from the remote</li>
+    <p>I have been using <code>git</code> frequently these days. Recently, I have been on the hunt for a script to display <code>git</code> status information in my <code>bash</code> prompt. This way I can easily see important <code>git</code> repository information in my shell prompt without having to type <code>git status</code> all of the time which would save frequent <code>git</code> users like myself a lot of time. However, many of the existing solutions that I found were either too simplistic or complete overkill for the task at hand, so I decided to create my own.</p>
+<p>My implementation prints the name of the current <code>git</code> branch along with some other indicators:</p>
+<ul>
+<li><code>'*'</code> &ndash; the repository is dirty</li>
+<li><code>'?'</code> &ndash; untracked files exist in the repository</li>
+<li><code>'='</code> &ndash; the local branch is in sync with the remote</li>
+<li><code>'&lt;'</code> &ndash; the local branch is behind of the remote</li>
+<li><code>'&gt;'</code> &ndash; the local branch is ahead of the remote</li>
+<li><code>'&lt;&gt;'</code> &ndash; the local branch has diverged from the remote</li>
 </ul>
-<p>The internals of the script take advantage of the <tt class="docutils literal">git porcelain</tt> command and some relatively simple <tt class="docutils literal">awk</tt> to parse its output. I felt that <tt class="docutils literal">awk</tt> was the right tool for the job since <tt class="docutils literal">awk</tt> made it easy to combine the <tt class="docutils literal">grep</tt> and <tt class="docutils literal">sed</tt> operations that I needed to use into one command. I also avoided the use of <tt class="docutils literal">bash</tt> specific shell scripting features in effort to keep the script POSIX compliant, so given that your system has a POSIX compliant shell and <tt class="docutils literal">awk</tt>, you should be able to use the script without any problems.</p>
-<div class="highlight"><pre><span></span>git_status<span class="o">()</span> <span class="o">{</span>
+<p>The internals of the script take advantage of the <code>git porcelain</code> command and some relatively simple <code>awk</code> to parse its output. I felt that <code>awk</code> was the right tool for the job since <code>awk</code> made it easy to combine the <code>grep</code> and <code>sed</code> operations that I needed to use into one command. I also avoided the use of <code>bash</code> specific shell scripting features in effort to keep the script POSIX compliant, so given that your system has a POSIX compliant shell and <code>awk</code>, you should be able to use the script without any problems.</p>
+<div class="highlight"><pre><span></span><code>git_status<span class="o">()</span> <span class="o">{</span>
     <span class="nv">STATUS</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>git status --branch --porcelain<span class="o">=</span>v2 <span class="m">2</span>&gt;/dev/null<span class="k">)</span><span class="s2">&quot;</span>
     <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;</span><span class="nv">$STATUS</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
         <span class="k">return</span>
@@ -85,9 +85,10 @@
         <span class="nb">echo</span> -n <span class="s2">&quot; (</span><span class="si">${</span><span class="nv">INDICATORS</span><span class="si">}</span><span class="s2">)&quot;</span>
     <span class="k">fi</span>
 <span class="o">}</span>
-</pre></div>
-<p>Here is a snippet of my <tt class="docutils literal">.bashrc</tt> file. I like to keep things tidy by checking to see if <tt class="docutils literal">git</tt> is installed before using the <tt class="docutils literal">PS1</tt> loaded with the <tt class="docutils literal">git</tt> status information.</p>
-<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">GIT_PS1</span><span class="o">=</span><span class="s2">&quot;\[\033[1;32m\]\u@\h \[\033[1;33m\]\w\[\033[1;35m\]\$(git_status)\[\033[0m\]\n\$ &quot;</span>
+</code></pre></div>
+
+<p>Here is a snippet of my <code>.bashrc</code> file. I like to keep things tidy by checking to see if <code>git</code> is installed before using the <code>PS1</code> loaded with the <code>git</code> status information.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">GIT_PS1</span><span class="o">=</span><span class="s2">&quot;\[\033[1;32m\]\u@\h \[\033[1;33m\]\w\[\033[1;35m\]\$(git_status)\[\033[0m\]\n\$ &quot;</span>
 <span class="nb">export</span> <span class="nv">DEFAULT_PS1</span><span class="o">=</span><span class="s1">&#39;\[\033[1;32m\]\u@\h \[\033[1;33m\]\w\[\033[0m\]\n\$ &#39;</span>
 
 <span class="k">if</span> <span class="o">[</span> -x <span class="s2">&quot;</span><span class="k">$(</span><span class="nb">command</span> -v git<span class="k">)</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
@@ -95,9 +96,9 @@
 <span class="k">else</span>
     <span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="nv">$DEFAULT_PS1</span>
 <span class="k">fi</span>
-</pre></div>
-<p>Cheers! I hope you enjoy the script.</p>
+</code></pre></div>
 
+<p>Cheers! I hope you enjoy the script.</p>
 </div>
             <hr>
             <footer>
