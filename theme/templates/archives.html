@@ -2,9 +2,12 @@
 {% block title %}{{ SITENAME }} - Archive{% endblock %}
 {% block content %}
 <h1>Archives</h1>
-<ul>
+<table>
     {% for article in dates %}
-    <li>{{ article.locale_date }} - <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+    <tr>
+        <td>{{ article.date|strftime('%Y-%m-%d') }}</td>
+        <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
+    </tr>
     {% endfor %}
-</ul>
+</table>
 {% endblock %}
