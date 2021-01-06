@@ -49,11 +49,3 @@ a.current { color: #b58900; }
     overflow-x: auto;
     padding: 5px;
 }
-
-td {
-    margin: 0;
-    padding-left: 0;
-    padding-right: 5px;
-}
-
-table { border-spacing: 0 }
