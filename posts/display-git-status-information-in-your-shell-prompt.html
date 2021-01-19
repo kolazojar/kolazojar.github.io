@@ -12,7 +12,7 @@
         <div class="box">
             <header>
                 <h1 id="sitename">Matt Krol</h1>
-                <p><i>Electrical Engineer, Bassist, Composer</i></p>
+                <p><small>Electrical Engineer, Bassist, Composer</small></p>
             </header>
             <nav><p>
                 <a href="https://mattkrol.me/">Blog</a>&nbsp;
@@ -64,7 +64,7 @@
         <span class="nv">UNTRACKED_IND</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
     <span class="k">fi</span>
     <span class="nv">REMOTE</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$STATUS</span><span class="s2">&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;$2 == &quot;branch.ab&quot; { gsub(/[+-]/, &quot;&quot;); print $3,$4 }&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
-    <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$REMOTE</span><span class="s2">&quot;</span> in
+    <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$REMOTE</span><span class="s2">&quot;</span> <span class="k">in</span>
         <span class="s1">&#39;&#39;</span><span class="o">)</span>
             <span class="nv">REMOTE_IND</span><span class="o">=</span><span class="s1">&#39;&#39;</span> <span class="p">;;</span>
         <span class="s1">&#39;0 0&#39;</span><span class="o">)</span>
@@ -102,7 +102,7 @@
 </div>
             <hr>
             <footer>
-                <p><i>&copy; Copyright 2021 Matt Krol. Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.</i></p>
+                <p><small>&copy; Copyright 2021 Matt Krol. Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.</small></p>
             </footer>
         </div>
     </body>
