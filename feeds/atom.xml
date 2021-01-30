@@ -20,7 +20,7 @@
     \label{sub-sub-problem}
     \mathop{\arg\max}\limits_{w,\lVert w \rVert=1}\frac{w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w}{w^Tw}=\mathop{\arg\max}\limits_{w,\lVert w\rVert=1}w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w
 \end{equation}&lt;/div&gt;
-&lt;p&gt;Since the matrices &lt;span class="math"&gt;\(B^{-\frac{1}{2}}\)&lt;/span&gt; and &lt;span class="math"&gt;\(A\)&lt;/span&gt; are symmetric, the product &lt;span class="math"&gt;\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)&lt;/span&gt; is also clearly symmetric. Hence, &lt;span class="math"&gt;\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)&lt;/span&gt; can be orthogonally diagonalized by a orthonormal matrix &lt;span class="math"&gt;\(V\)&lt;/span&gt; and a diagonal matrix &lt;span class="math"&gt;\(\Sigma\)&lt;/span&gt; such that &lt;span class="math"&gt;\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}=V\Sigma V^T\)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;Since the matrices &lt;span class="math"&gt;\(B^{-\frac{1}{2}}\)&lt;/span&gt; and &lt;span class="math"&gt;\(A\)&lt;/span&gt; are symmetric, the product &lt;span class="math"&gt;\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)&lt;/span&gt; is also clearly symmetric. Hence, &lt;span class="math"&gt;\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)&lt;/span&gt; can be orthogonally diagonalized by an orthonormal matrix &lt;span class="math"&gt;\(V\)&lt;/span&gt; and a diagonal matrix &lt;span class="math"&gt;\(\Sigma\)&lt;/span&gt; such that &lt;span class="math"&gt;\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}=V\Sigma V^T\)&lt;/span&gt;. &lt;/p&gt;
 &lt;div class="math"&gt;\begin{equation}
     \mathop{\arg\max}\limits_{w,\lVert w\rVert=1}w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w=\mathop{\arg\max}\limits_{w,\lVert w\rVert=1}w^TV\Sigma V^Tw
 \end{equation}&lt;/div&gt;
