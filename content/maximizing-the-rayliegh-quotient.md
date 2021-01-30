@@ -55,11 +55,11 @@ Now we can rewrite $w^TV\Sigma V^Tw$ as a summation and rewrite the optimization
     &=\mathop{\arg\max}\limits_{w,\lVert w\rVert=1}\sum_{i=1}^{d}\left(w^Tv_i\right)^2\lambda_i\label{summation}
 \end{align}
 
-Since $V$ is orthonormal, we have $w^TVV^Tw=1$, so the summation $\sum_{i=1}^{d}\left(w^Tv_i\right)^2=1$ for all $w$. Additionally, since $A$ and $B^{-\frac{1}{2}}$ are symmetric and positive semi-definite, $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ is also symmetric and positive semi-definite, but not necessarily invertible. Thus, we conclude that all $\lambda_i\ge 0$. Now suppose that $\lambda^*=\lambda_n$ is the largest eigenvalue of $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$. So $(\ref{ortho})$ must be true.
+Since $V$ is orthonormal, we have $w^TVV^Tw=1$, so the summation $\sum_{i=1}^{d}\left(w^Tv_i\right)^2=1$ for all $w$. Additionally, since $A$ and $B^{-\frac{1}{2}}$ are symmetric and positive semi-definite, $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ is also symmetric and positive semi-definite, but not necessarily invertible. Thus, we conclude that all $\lambda_i\ge 0$. Now suppose that $\lambda^*=\lambda_d$ is the largest eigenvalue of $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$. So $(\ref{ortho})$ must be true.
 
 \begin{equation}
     \label{ortho}
-    \frac{\lambda_1}{\lambda_{*}}\left(w^Tv_1\right)^2+\frac{\lambda_2}{\lambda_{*}}\left(w^Tv_2\right)^2+\dots+\left(w^Tv_n\right)\leq 1
+    \frac{\lambda_1}{\lambda^*}\left(w^Tv_1\right)^2+\frac{\lambda_2}{\lambda^*}\left(w^Tv_2\right)^2+\dots+\frac{\lambda_{d-1}}{\lambda^*}\left(w^Tv_{d-1}\right)^2+\left(w^Tv_d\right)\leq 1
 \end{equation}
 
 It follows from $(\ref{ortho})$ that $(\ref{almost-done})$ must also be true.
