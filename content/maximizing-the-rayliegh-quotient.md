@@ -35,7 +35,7 @@ Considering the fact that $w=\lVert w\rVert\frac{w}{\lVert w\rVert}$, we notice 
     \mathop{\arg\max}\limits_{w,\lVert w \rVert=1}\frac{w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w}{w^Tw}=\mathop{\arg\max}\limits_{w,\lVert w\rVert=1}w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w
 \end{equation}
 
-Since the matrices $B^{-\frac{1}{2}}$ and $A$ are symmetric, the product $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ is also clearly symmetric. Hence, $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ can be orthogonally diagonalized by a orthonormal matrix $V$ and a diagonal matrix $\Sigma$ such that $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}=V\Sigma V^T$. 
+Since the matrices $B^{-\frac{1}{2}}$ and $A$ are symmetric, the product $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ is also clearly symmetric. Hence, $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ can be orthogonally diagonalized by an orthonormal matrix $V$ and a diagonal matrix $\Sigma$ such that $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}=V\Sigma V^T$. 
 
 \begin{equation}
     \mathop{\arg\max}\limits_{w,\lVert w\rVert=1}w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w=\mathop{\arg\max}\limits_{w,\lVert w\rVert=1}w^TV\Sigma V^Tw
