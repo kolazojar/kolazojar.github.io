@@ -7,9 +7,9 @@ Summary: The rayleigh quotient maximization problem naturally occurs in many dis
 
 The rayleigh quotient maximization problem naturally occurs in many disciplines---machine learning, statistics, quantum mechanics, and portfolio optimization just to name a few. Although the solution of this problem is widely known, many texts state the solution without offering any proof. In this post, I will present proof of the rayleigh quotient maximization problem solution that will hopefully satisfy the most inquisitive of readers!
 
-We will begin by stating the rayleigh quotient maximization problem.
+The following proof will use only basic facts from linear algebra. However, one could argue that using lagrange multipliers would provide a more concise proof. Although this may be true, I hope that readers will still find this proof helpful.
 
-Let $A,B\in\mathbb{R}^{d\times d}$ be two symmetric positive semi-definite matrices and $x\in\mathbb{R}^{d}$ be a column vector. Additionally, we will require $B$ to be invertible. We will show that the rayleigh quotient problem in $(\ref{problem-statement})$ is maximized whenever $x$ is collinear to the eigenvector of $B^{-1}A$ that corresponds to the largest eigenvalue.
+We will begin by stating the rayleigh quotient maximization problem. Let $A,B\in\mathbb{R}^{d\times d}$ be two symmetric positive semi-definite matrices and $x\in\mathbb{R}^{d}$ be a column vector. Additionally, we will require $B$ to be invertible. We will show that the rayleigh quotient problem in $(\ref{problem-statement})$ is maximized whenever $x$ is collinear to the eigenvector of $B^{-1}A$ that corresponds to the largest eigenvalue.
 
 \begin{equation}
     \label{problem-statement}
@@ -59,13 +59,13 @@ Since $V$ is orthonormal, we have $w^TVV^Tw=1$, so the summation $\sum_{i=1}^{d}
 
 \begin{equation}
     \label{ortho}
-    \frac{\lambda_1}{\lambda^*}\left(w^Tv_1\right)^2+\frac{\lambda_2}{\lambda^*}\left(w^Tv_2\right)^2+\dots+\frac{\lambda_{d-1}}{\lambda^*}\left(w^Tv_{d-1}\right)^2+\left(w^Tv_d\right)\leq 1
+    \frac{\lambda_1}{\lambda^*}\left(w^Tv_1\right)^2+\frac{\lambda_2}{\lambda^*}\left(w^Tv_2\right)^2+\dots+\frac{\lambda_{d-1}}{\lambda^*}\left(w^Tv_{d-1}\right)^2+\left(w^Tv_d\right)^2\leq 1
 \end{equation}
 
 It follows from $(\ref{ortho})$ that $(\ref{almost-done})$ must also be true.
 \begin{equation}
     \label{almost-done}
-    \sum_{i=1}^d\left(w^Tv_i\right)^2\lambda_i\leq \lambda^*
+    \sum_{i=1}^d\lambda_i\left(w^Tv_i\right)^2\leq \lambda^*
 \end{equation}
 
 Clearly, $\sum_{i=1}^d\left(w^Tv_i\right)^2\lambda_i=\lambda^*$ if and only if $w$ is collinear to the eigenvector of $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ that corresponds to the largest eigenvalue. Hence, under these conditions, we have maximized $(\ref{sub-problem})$. Using the substitution in $(\ref{sub})$, a solution to $(\ref{sub-problem})$ can be translated into a solution to $(\ref{problem-statement})$.
