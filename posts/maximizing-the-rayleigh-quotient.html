@@ -38,8 +38,8 @@
 </div>
 <div>
     <p>The rayleigh quotient maximization problem naturally occurs in many disciplines&mdash;machine learning, statistics, quantum mechanics, and portfolio optimization just to name a few. Although the solution of this problem is widely known, many texts state the solution without offering any proof. In this post, I will present proof of the rayleigh quotient maximization problem solution that will hopefully satisfy the most inquisitive of readers!</p>
-<p>We will begin by stating the rayleigh quotient maximization problem.</p>
-<p>Let <span class="math">\(A,B\in\mathbb{R}^{d\times d}\)</span> be two symmetric positive semi-definite matrices and <span class="math">\(x\in\mathbb{R}^{d}\)</span> be a column vector. Additionally, we will require <span class="math">\(B\)</span> to be invertible. We will show that the rayleigh quotient problem in <span class="math">\((\ref{problem-statement})\)</span> is maximized whenever <span class="math">\(x\)</span> is collinear to the eigenvector of <span class="math">\(B^{-1}A\)</span> that corresponds to the largest eigenvalue.</p>
+<p>The following proof will use only basic facts from linear algebra. However, one could argue that using lagrange multipliers would provide a more concise proof. Although this may be true, I hope that readers will still find this proof helpful.</p>
+<p>We will begin by stating the rayleigh quotient maximization problem. Let <span class="math">\(A,B\in\mathbb{R}^{d\times d}\)</span> be two symmetric positive semi-definite matrices and <span class="math">\(x\in\mathbb{R}^{d}\)</span> be a column vector. Additionally, we will require <span class="math">\(B\)</span> to be invertible. We will show that the rayleigh quotient problem in <span class="math">\((\ref{problem-statement})\)</span> is maximized whenever <span class="math">\(x\)</span> is collinear to the eigenvector of <span class="math">\(B^{-1}A\)</span> that corresponds to the largest eigenvalue.</p>
 <div class="math">\begin{equation}
     \label{problem-statement}
     \mathop{\arg\max}\limits_{x}\frac{x^TAx}{x^TBx}
@@ -75,13 +75,13 @@
 <p>Since <span class="math">\(V\)</span> is orthonormal, we have <span class="math">\(w^TVV^Tw=1\)</span>, so the summation <span class="math">\(\sum_{i=1}^{d}\left(w^Tv_i\right)^2=1\)</span> for all <span class="math">\(w\)</span>. Additionally, since <span class="math">\(A\)</span> and <span class="math">\(B^{-\frac{1}{2}}\)</span> are symmetric and positive semi-definite, <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also symmetric and positive semi-definite, but not necessarily invertible. Thus, we conclude that all <span class="math">\(\lambda_i\ge 0\)</span>. Now suppose that <span class="math">\(\lambda^*=\lambda_d\)</span> is the largest eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span>. So <span class="math">\((\ref{ortho})\)</span> must be true.</p>
 <div class="math">\begin{equation}
     \label{ortho}
-    \frac{\lambda_1}{\lambda^*}\left(w^Tv_1\right)^2+\frac{\lambda_2}{\lambda^*}\left(w^Tv_2\right)^2+\dots+\frac{\lambda_{d-1}}{\lambda^*}\left(w^Tv_{d-1}\right)^2+\left(w^Tv_d\right)\leq 1
+    \frac{\lambda_1}{\lambda^*}\left(w^Tv_1\right)^2+\frac{\lambda_2}{\lambda^*}\left(w^Tv_2\right)^2+\dots+\frac{\lambda_{d-1}}{\lambda^*}\left(w^Tv_{d-1}\right)^2+\left(w^Tv_d\right)^2\leq 1
 \end{equation}</div>
 <p>It follows from <span class="math">\((\ref{ortho})\)</span> that <span class="math">\((\ref{almost-done})\)</span> must also be true.
 </p>
 <div class="math">\begin{equation}
     \label{almost-done}
-    \sum_{i=1}^d\left(w^Tv_i\right)^2\lambda_i\leq \lambda^*
+    \sum_{i=1}^d\lambda_i\left(w^Tv_i\right)^2\leq \lambda^*
 \end{equation}</div>
 <p>Clearly, <span class="math">\(\sum_{i=1}^d\left(w^Tv_i\right)^2\lambda_i=\lambda^*\)</span> if and only if <span class="math">\(w\)</span> is collinear to the eigenvector of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> that corresponds to the largest eigenvalue. Hence, under these conditions, we have maximized <span class="math">\((\ref{sub-problem})\)</span>. Using the substitution in <span class="math">\((\ref{sub})\)</span>, a solution to <span class="math">\((\ref{sub-problem})\)</span> can be translated into a solution to <span class="math">\((\ref{problem-statement})\)</span>.</p>
 <div class="math">\begin{align}
