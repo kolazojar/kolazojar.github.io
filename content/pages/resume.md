@@ -10,7 +10,7 @@ Title: Resume
 ## Skills
 
 * Basic
-    * Make, Assembly, MATLAB, Soldering, HTML, CSS, SQL, Markdown
+    * Make, Assembly, MATLAB, Java, Soldering, HTML, CSS, SQL, Markdown
 * Intermediate
     * Verilog, VHDL, Quartus, ModelSim, Bash, Linux, Latex, Git
 * Advanced
@@ -45,12 +45,12 @@ Title: Resume
 
 ## Work Experience
 
-* Advanced Programming Teaching Assistant, Rochester Institute of Technology, 08/2020--Present
-    * Responsible for grading student programming projects and holding weekly office hours. The programming projects were focused on object oriented programming in C++.
 * Graduate Research Assistant, [RIT MILOS LAB](https://sites.google.com/view/miloslab/), 01/2020--Present
     * Working under the direction of Dr. Panos Markopoulos, to develop principal component analysis algorithms that are robust to outliers via the LP1-Norm.
-* Math Tutor, Rochester Institute of Technology, 08/2019--Present
+* Math Tutor, Rochester Institute of Technology, 08/2019--12/2020
     * Assist students with their work in calculus, linear algebra, differential equations, and physics.
+* Advanced Programming Teaching Assistant, Rochester Institute of Technology, 08/2020--12/2020
+    * Responsible for grading student programming projects and holding weekly office hours. The programming projects were focused on object oriented programming in C++.
 * Digital Systems II Teaching Assistant, Rochester Institute of Technology, 08/2020--12/2020
     * Was responsible for running a lab section, grading student lab assignments, and holding weekly office hours. The lab assignments were focused on digital design in both VHDL and Verilog. Quartus and ModelSim were used in the lab assignments to compile, synthesize, and verify the HDL designs.
 * Applications Engineering Intern, Texas Instruments, 06/2020--08/2020
