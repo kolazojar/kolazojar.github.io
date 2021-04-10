@@ -10,21 +10,21 @@ Title: Resume
 ## Skills
 
 * Basic
-    * Make, Assembly, MATLAB, Java, Soldering, HTML, CSS, SQL, Markdown
+    * Make, Assembly, MATLAB, Soldering, HTML, CSS, SQL, Markdown
 * Intermediate
-    * Verilog, VHDL, Quartus, ModelSim, Bash, Linux, Latex, Git
+    * Verilog, VHDL, Quartus, ModelSim, Bash, Linux, Latex, Git, C++, Java
 * Advanced
-    * C, C++, Python, SPICE
+    * C, Python, SPICE
 
 ## Relevant Coursework
 
 * Computer Science I, II
 * Embedded Systems Design
-* Advanced Programming
-* Digital Circuits
-* Control Systems
 * Analog Electronics
+* Digital Electronics
+* Control Systems
 * Communication Systems
+* Digital Signal Processing
 
 ## Certificates
 
@@ -33,12 +33,13 @@ Title: Resume
 ## Research Areas
 
 * Robust Principal Component Analysis
-* LP1-Norm Data Analysis
+* LP1-Norm Principal Component Analysis
 * Convex/Non-Convex Optimization
 
 ## Projects
 
-* [STM32F4 Monophonic Sound Synthesizer](https://github.com/kolazojar/arm_mono_synth/)
+* RIT Senior Design Project (in-progress)
+    * Our team is designing a mobile application and server backend to record sensor and survey data from post-stroke patients via their personal mobile device. Researchers will be able to access patient data and evaluate their fall risk remotely. Patients will be able to receive their fall risk probability via the mobile application.
 * Verilog Pipelined Multiplier Unit
 * HCS12 Smart-Fan Cooling System
 * DE0-Nano FPGA Microwave Control Unit
