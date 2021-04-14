@@ -24,7 +24,9 @@ Title: Resume
 * Digital Electronics
 * Control Systems
 * Communication Systems
+* Random Signals and Noise
 * Digital Signal Processing
+* Machine Intelligence
 
 ## Certificates
 
