@@ -10,9 +10,9 @@ Title: Resume
 ## Skills
 
 * Basic
-    * Make, Assembly, MATLAB, Soldering, HTML, CSS, SQL, Markdown
+    * Make, Assembly, Soldering, HTML, CSS, SQL, Markdown
 * Intermediate
-    * Verilog, VHDL, Quartus, ModelSim, Bash, Linux, Latex, Git, C++, Java
+    * Verilog, VHDL, MATLAB, Quartus, ModelSim, Bash, Linux, Latex, Git, C++, Java
 * Advanced
     * C, Python, SPICE
 
@@ -41,7 +41,7 @@ Title: Resume
 ## Projects
 
 * RIT Senior Design Project (in-progress)
-    * Our team is designing a mobile application and server backend to record sensor and survey data from post-stroke patients via their personal mobile device. Researchers will be able to access patient data and evaluate their fall risk remotely. Patients will be able to receive their fall risk probability via the mobile application.
+    * Our team is designing an Andriod mobile application and Python Flask server backend to record sensor and survey data from post-stroke patients via their personal mobile device. Researchers will be able to access patient data and evaluate their fall risk remotely. Patients will be able to receive their fall risk probability via the mobile application.
 * Verilog Pipelined Multiplier Unit
 * HCS12 Smart-Fan Cooling System
 * DE0-Nano FPGA Microwave Control Unit
