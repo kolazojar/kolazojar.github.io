@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Matt Krol - Maximizing the Rayleigh Quotient</title>
+        <title>Matt Krol - Maximizing the Rayleigh&nbsp;Quotient</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="/theme/style.css">
@@ -24,7 +24,7 @@
                 <a href="https://mattkrol.me/resume.html">Resume</a>&nbsp;
             </p></nav>
             <hr>
-<h1>Maximizing the Rayleigh Quotient</h1>
+<h1>Maximizing the Rayleigh&nbsp;Quotient</h1>
 <time datetime="2021-01-30T00:00:00-05:00">
     Date: Sat 30 January 2021
 </time>
@@ -37,70 +37,70 @@
     <a href="https://mattkrol.me/tag/proofs.html">Proofs</a>
 </div>
 <div>
-    <p>The rayleigh quotient maximization problem naturally occurs in many disciplines&mdash;machine learning, statistics, quantum mechanics, and portfolio optimization just to name a few. Although the solution of this problem is widely known, many texts state the solution without offering any proof. In this post, I will present proof of the rayleigh quotient maximization problem solution that will hopefully satisfy the most inquisitive of readers!</p>
-<p>The following proof will use only basic facts from linear algebra. However, one could argue that using lagrange multipliers would provide a more concise proof. Although this may be true, I hope that readers will still find this proof helpful.</p>
-<p>Let <span class="math">\(A,B\in\mathbb{R}^{d\times d}\)</span> be two symmetric positive semi-definite matrices and <span class="math">\(x\in\mathbb{R}^{d}\)</span> be a column vector. Additionally, we will require <span class="math">\(B\)</span> to be invertible. We will begin the proof by stating the rayleigh quotient maximization problem
+    <p>The rayleigh quotient maximization problem naturally occurs in many disciplines&mdash;machine learning, statistics, quantum mechanics, and portfolio optimization just to name a few. Although the solution of this problem is widely known, many texts state the solution without offering any proof. In this post, I will present proof of the rayleigh quotient maximization problem solution that will hopefully satisfy the most inquisitive of&nbsp;readers!</p>
+<p>The following proof will use only basic facts from linear algebra. However, one could argue that using lagrange multipliers would provide a more concise proof. Although this may be true, I hope that readers will still find this proof&nbsp;helpful.</p>
+<p>Let <span class="math">\(A,B\in\mathbb{R}^{d\times d}\)</span> be two symmetric positive semi-definite matrices and <span class="math">\(x\in\mathbb{R}^{d}\)</span> be a column vector. Additionally, we will require <span class="math">\(B\)</span> to be invertible. We will begin the proof by stating the rayleigh quotient maximization&nbsp;problem
 </p>
 <div class="math">\begin{equation}
     \label{problem-statement}
     \mathop{\max}\limits_{x}\frac{x^TAx}{x^TBx}.
 \end{equation}</div>
 <p>
-We will show that the rayleigh quotient problem in <span class="math">\((\ref{problem-statement})\)</span> is maximized whenever <span class="math">\(x\)</span> is collinear to the eigenvector of <span class="math">\(B^{-1}A\)</span> that corresponds its largest eigenvalue.</p>
-<p>Since <span class="math">\(B\)</span> is symmetric, we know that there exists an orthonormal matrix <span class="math">\(P\in\mathbb{R}^{d\times d}\)</span> and a diagonal matrix <span class="math">\(D\in\mathbb{R}^{d\times d}\)</span> such that <span class="math">\(B=PDP^T\)</span>. Furthermore, since <span class="math">\(B\)</span> is also invertible and positive semi-definite, we know that the diagonal entries of <span class="math">\(D\)</span>, i.e., the eigenvalues of <span class="math">\(B\)</span>, are positive and non-zero. Consequently, the matrix <span class="math">\(B^{-\frac{1}{2}}\)</span> exists, and we can use the invertible substitution 
+We will show that the rayleigh quotient problem in <span class="math">\((\ref{problem-statement})\)</span> is maximized whenever <span class="math">\(x\)</span> is collinear to the eigenvector of <span class="math">\(B^{-1}A\)</span> that corresponds its largest&nbsp;eigenvalue.</p>
+<p>Since <span class="math">\(B\)</span> is symmetric, we know that there exists an orthonormal matrix <span class="math">\(P\in\mathbb{R}^{d\times d}\)</span> and a diagonal matrix <span class="math">\(D\in\mathbb{R}^{d\times d}\)</span> such that <span class="math">\(B=PDP^T\)</span>. Furthermore, since <span class="math">\(B\)</span> is also invertible and positive semi-definite, we know that the diagonal entries of <span class="math">\(D\)</span>, i.e., the eigenvalues of <span class="math">\(B\)</span>, are positive and non-zero. Consequently, the matrix <span class="math">\(B^{-\frac{1}{2}}\)</span> exists, and we can use the invertible&nbsp;substitution 
 </p>
 <div class="math">\begin{equation}
     \label{sub}
     x=B^{-\frac{1}{2}}w
 \end{equation}</div>
 <p>
-to yield
+to&nbsp;yield
 </p>
 <div class="math">\begin{equation}
     \label{sub-problem}
     \mathop{\max}\limits_{x}\frac{x^TAx}{x^TBx}=\mathop{\max}\limits_{w}\frac{w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w}{w^Tw}.
 \end{equation}</div>
 <p>
-Now we can observe that <span class="math">\((\ref{sub-problem})\)</span> is invariant to the norm of <span class="math">\(w\)</span>, so 
+Now we can observe that <span class="math">\((\ref{sub-problem})\)</span> is invariant to the norm of <span class="math">\(w\)</span>,&nbsp;so 
 </p>
 <div class="math">\begin{equation}
     \label{sub-sub-problem}
-    \mathop{\max}\limits_{\lVert w \rVert_2=1}\frac{w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w}{w^Tw}=\mathop{\max}\limits_{\lVert w\rVert_2=1}w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w.
+    \mathop{\max}\limits_{w}\frac{w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w}{w^Tw}=\mathop{\max}\limits_{\lVert w\rVert_2=1}w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w.
 \end{equation}</div>
-<p>Since the matrices <span class="math">\(B^{-\frac{1}{2}}\)</span> and <span class="math">\(A\)</span> are symmetric, the product <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also clearly symmetric. Hence, <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> can be orthogonally diagonalized by an orthonormal matrix <span class="math">\(V\)</span> and a diagonal matrix <span class="math">\(\Sigma\)</span> such that <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}=V\Sigma V^T\)</span>, and
+<p>Since the matrices <span class="math">\(B^{-\frac{1}{2}}\)</span> and <span class="math">\(A\)</span> are symmetric, the product <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also clearly symmetric. Hence, <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> can be orthogonally diagonalized by an orthonormal matrix <span class="math">\(V\)</span> and a diagonal matrix <span class="math">\(\Sigma\)</span> such that <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}=V\Sigma V^T\)</span>,&nbsp;and
 </p>
 <div class="math">\begin{equation}
     \mathop{\max}\limits_{\lVert w\rVert_2=1}w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w=\mathop{\max}\limits_{\lVert w\rVert_2=1}w^TV\Sigma V^Tw.
 \end{equation}</div>
 <p>
-Let <span class="math">\(\lambda_i\in\mathbb{R}\)</span> and <span class="math">\(v_i\in\mathbb{R^{d}}\)</span> with <span class="math">\(i\in\{1,2,\dots,d\}\)</span> be the eigenvalues and eigenvectors of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> respectively with
+Let <span class="math">\(\lambda_i\in\mathbb{R}\)</span> and <span class="math">\(v_i\in\mathbb{R^{d}}\)</span> with <span class="math">\(i\in\{1,2,\dots,d\}\)</span> be the eigenvalues and eigenvectors of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> respectively&nbsp;with
 </p>
 <div class="math">\begin{align}
     V&amp;=\begin{bmatrix}v_1 &amp; v_2 &amp; \dots &amp; v_d\end{bmatrix}\\
     \Sigma&amp;=\operatorname{diag}\{\lambda_1,\lambda_2,\dots,\lambda_d\}.
 \end{align}</div>
 <p>
-Now we can rewrite <span class="math">\(w^TV\Sigma V^Tw\)</span> as a summation, so
+Now we can rewrite <span class="math">\(w^TV\Sigma V^Tw\)</span> as a summation,&nbsp;so
 </p>
 <div class="math">\begin{equation}
     \mathop{\max}\limits_{\lVert w\rVert_2=1}w^TV\Sigma V^Tw=\mathop{\max}\limits_{\lVert w\rVert_2=1}\sum_{i=1}^{d}\left(w^Tv_i\right)^2\lambda_i\label{summation}.
 \end{equation}</div>
 <p>
-Since <span class="math">\(V\)</span> is orthonormal, we have <span class="math">\(w^TVV^Tw=1\)</span>, so the summation <span class="math">\(\sum_{i=1}^{d}\left(w^Tv_i\right)^2=1\)</span> for all <span class="math">\(w\)</span> with <span class="math">\(\lVert w\rVert_2=1\)</span>. Additionally, since <span class="math">\(A\)</span> and <span class="math">\(B^{-\frac{1}{2}}\)</span> are symmetric and positive semi-definite, <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also symmetric and positive semi-definite, but not necessarily invertible. Thus, we conclude that all <span class="math">\(\lambda_i\ge 0\)</span>. Since there will be at least one non-zero eigenvalue, suppose that <span class="math">\(\lambda^*=\lambda_d\)</span> is the largest eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span>, then
+Since <span class="math">\(V\)</span> is orthonormal, we have <span class="math">\(w^TVV^Tw=1\)</span>, so the summation <span class="math">\(\sum_{i=1}^{d}\left(w^Tv_i\right)^2=1\)</span> for all <span class="math">\(w\)</span> with <span class="math">\(\lVert w\rVert_2=1\)</span>. Additionally, since <span class="math">\(A\)</span> and <span class="math">\(B^{-\frac{1}{2}}\)</span> are symmetric and positive semi-definite, <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also symmetric and positive semi-definite, but not necessarily invertible. Thus, we conclude that all <span class="math">\(\lambda_i\ge 0\)</span>. Since there will be at least one non-zero eigenvalue, suppose that <span class="math">\(\lambda^*=\lambda_d\)</span> is the largest eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span>,&nbsp;then
 </p>
 <div class="math">\begin{equation}
     \label{ortho}
     \frac{\lambda_1}{\lambda^*}\left(w^Tv_1\right)^2+\frac{\lambda_2}{\lambda^*}\left(w^Tv_2\right)^2+\dots+\frac{\lambda_{d-1}}{\lambda^*}\left(w^Tv_{d-1}\right)^2+\left(w^Tv_d\right)^2\leq 1.
 \end{equation}</div>
 <p>
-It follows from <span class="math">\((\ref{ortho})\)</span> that
+It follows from <span class="math">\((\ref{ortho})\)</span>&nbsp;that
 </p>
 <div class="math">\begin{equation}
     \label{almost-done}
     \sum_{i=1}^d\lambda_i\left(w^Tv_i\right)^2\leq \lambda^*.
 \end{equation}</div>
 <p>Clearly, <span class="math">\(\sum_{i=1}^d\left(w^Tv_i\right)^2\lambda_i=\lambda^*\)</span> if and only if <span class="math">\(w\)</span> is collinear to the eigenvector of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> that corresponds to the largest eigenvalue. Hence, under these conditions, we have maximized <span class="math">\((\ref{sub-problem})\)</span>.</p>
-<p>Using the substitution in <span class="math">\((\ref{sub})\)</span>, a solution to <span class="math">\((\ref{sub-problem})\)</span> can be translated into a solution to <span class="math">\((\ref{problem-statement})\)</span>. Suppose that <span class="math">\(w\)</span> and <span class="math">\(\lambda\)</span> are set to be any eigenpair of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span>, then
+<p>Using the substitution in <span class="math">\((\ref{sub})\)</span>, a solution to <span class="math">\((\ref{sub-problem})\)</span> can be translated into a solution to <span class="math">\((\ref{problem-statement})\)</span>. Suppose that <span class="math">\(w\)</span> and <span class="math">\(\lambda\)</span> are set to be any eigenpair of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span>,&nbsp;then
 </p>
 <div class="math">\begin{align}
     B^{-\frac{1}{2}}AB^{-\frac{1}{2}}w&amp;=\lambda w\\
@@ -108,7 +108,7 @@ It follows from <span class="math">\((\ref{ortho})\)</span> that
     B^{-1}Ax&amp;=\lambda x.
 \end{align}</div>
 <p>
-We have just shown that any eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also an eigenvalue of <span class="math">\(B^{-1}A\)</span>. Since the later two matrices have the same rank&mdash;which is simply equal to the rank of <span class="math">\(A\)</span>&mdash;we can conclude that they have the same set of eigenvalues. Accordingly, <span class="math">\((\ref{sub})\)</span> gives us a one-to-one correspondence between their eigenvectors. Thus, the maximum eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also the maximum eigenvalue of <span class="math">\(B^{-1}A\)</span>. So if <span class="math">\(w^*\)</span> is a solution to <span class="math">\((\ref{sub-problem})\)</span>, then <span class="math">\(x^*=B^{-\frac{1}{2}}w^*\)</span> is a solution to <span class="math">\((\ref{problem-statement})\)</span>. Hence, <span class="math">\((\ref{problem-statement})\)</span> is maximized when <span class="math">\(x\)</span> is collinear to the eigenvector of <span class="math">\(B^{-1}A\)</span> that corresponds to its largest eigenvector. This completes the proof!</p>
+We have just shown that any eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also an eigenvalue of <span class="math">\(B^{-1}A\)</span>. Since the later two matrices have the same rank, which is simply equal to the rank of <span class="math">\(A\)</span>, we can conclude that they have the same set of eigenvalues. Accordingly, <span class="math">\((\ref{sub})\)</span> gives us a one-to-one correspondence between their eigenvectors. Thus, the maximum eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also the maximum eigenvalue of <span class="math">\(B^{-1}A\)</span>. So if <span class="math">\(w^*\)</span> is a solution to <span class="math">\((\ref{sub-problem})\)</span>, then <span class="math">\(x^*=B^{-\frac{1}{2}}w^*\)</span> is a solution to <span class="math">\((\ref{problem-statement})\)</span>. Hence, <span class="math">\((\ref{problem-statement})\)</span> is maximized when <span class="math">\(x\)</span> is collinear to the eigenvector of <span class="math">\(B^{-1}A\)</span> that corresponds to its largest eigenvector. This completes the&nbsp;proof!</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

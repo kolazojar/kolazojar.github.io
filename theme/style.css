@@ -1,4 +1,5 @@
 @import "pygment.css";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Merriweather&family=Merriweather+Sans:wght@700&display=swap');
 
 html {
     margin: 0;
@@ -8,7 +9,7 @@ html {
 body {
     margin: 10px;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Merriweather', serif;
     background-color: #002b36;
     color: #839496;
     -webkit-text-size-adjust: none;
@@ -16,17 +17,17 @@ body {
 
 .box {
     max-width: 940px;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
-h1, h2, h3, h4, h5, h6 { color: #93a1a1; }
-
-#sitename {
-    font-size: 2.4em;
-    margin: 0;
-    padding: 0;
+h1, h2, h3, h4, h5, h6 {
+    color: #93a1a1;
+    font-family: 'Merriweather Sans', sans-serif;
 }
+
+#sitename { font-size: 2.5em; }
 
 hr { border: 1px solid #93a1a1; }
 
@@ -40,6 +41,11 @@ a:active { color: #b58900; }
 
 a.current { color: #b58900; }
 
+code {
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.9em;
+}
+
 .highlight pre {
     margin: 0;
     padding: 0;
@@ -47,5 +53,5 @@ a.current { color: #b58900; }
 
 .highlight {
     overflow-x: auto;
-    padding: 5px;
+    padding: 15px;
 }
