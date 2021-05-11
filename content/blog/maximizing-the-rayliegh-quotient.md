@@ -29,7 +29,7 @@ to yield
 Now we can observe that $(\ref{sub-problem})$ is invariant to the norm of $w$, so 
 \begin{equation}
     \label{sub-sub-problem}
-    \mathop{\max}\limits_{\lVert w \rVert_2=1}\frac{w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w}{w^Tw}=\mathop{\max}\limits_{\lVert w\rVert_2=1}w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w.
+    \mathop{\max}\limits_{w}\frac{w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w}{w^Tw}=\mathop{\max}\limits_{\lVert w\rVert_2=1}w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w.
 \end{equation}
 
 Since the matrices $B^{-\frac{1}{2}}$ and $A$ are symmetric, the product $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ is also clearly symmetric. Hence, $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ can be orthogonally diagonalized by an orthonormal matrix $V$ and a diagonal matrix $\Sigma$ such that $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}=V\Sigma V^T$, and
@@ -64,4 +64,4 @@ Using the substitution in $(\ref{sub})$, a solution to $(\ref{sub-problem})$ can
     B^{-\frac{1}{2}}AB^{-\frac{1}{2}}B^{\frac{1}{2}}x&=\lambda B^{\frac{1}{2}}x\\
     B^{-1}Ax&=\lambda x.
 \end{align}
-We have just shown that any eigenvalue of $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ is also an eigenvalue of $B^{-1}A$. Since the later two matrices have the same rank---which is simply equal to the rank of $A$---we can conclude that they have the same set of eigenvalues. Accordingly, $(\ref{sub})$ gives us a one-to-one correspondence between their eigenvectors. Thus, the maximum eigenvalue of $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ is also the maximum eigenvalue of $B^{-1}A$. So if $w^*$ is a solution to $(\ref{sub-problem})$, then $x^*=B^{-\frac{1}{2}}w^*$ is a solution to $(\ref{problem-statement})$. Hence, $(\ref{problem-statement})$ is maximized when $x$ is collinear to the eigenvector of $B^{-1}A$ that corresponds to its largest eigenvector. This completes the proof!
+We have just shown that any eigenvalue of $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ is also an eigenvalue of $B^{-1}A$. Since the later two matrices have the same rank, which is simply equal to the rank of $A$, we can conclude that they have the same set of eigenvalues. Accordingly, $(\ref{sub})$ gives us a one-to-one correspondence between their eigenvectors. Thus, the maximum eigenvalue of $B^{-\frac{1}{2}}AB^{-\frac{1}{2}}$ is also the maximum eigenvalue of $B^{-1}A$. So if $w^*$ is a solution to $(\ref{sub-problem})$, then $x^*=B^{-\frac{1}{2}}w^*$ is a solution to $(\ref{problem-statement})$. Hence, $(\ref{problem-statement})$ is maximized when $x$ is collinear to the eigenvector of $B^{-1}A$ that corresponds to its largest eigenvector. This completes the proof!

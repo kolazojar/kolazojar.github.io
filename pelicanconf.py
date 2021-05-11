@@ -42,14 +42,15 @@ AUTHOR_SAVE_AS = ''
 # URL and SAVE settings.
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
-ARTICLE_URL = 'posts/{slug}.html'
-ARTICLE_SAVE_AS = 'posts/{slug}.html'
+ARTICLE_PATH = ['blog']
+ARTICLE_URL = '{date:%Y}/{slug}.html'
+ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
 
 # Use all templates except for authors.
 DIRECT_TEMPLATES = ['index', 'categories', 'tags', 'archives']
 
 # Static paths for images, pdfs, etc.
-STATIC_PATHS = ['images', 'docs']
+STATIC_PATHS = ['images', 'pdfs']
 
 # Markdown settings.
 MARKDOWN = {
@@ -57,7 +58,11 @@ MARKDOWN = {
         'markdown.extensions.codehilite': {'css_class': 'highlight'},
         'markdown.extensions.extra': {},
         'markdown.extensions.meta': {},
-        'markdown.extensions.smarty': {},
+        'markdown.extensions.smarty': {}
     },
     'output_format': 'html5',
 }
+
+# Typogrify settings.
+TYPOGRIFY = True
+TYPOGRIFY_DASHES = 'oldschool'
