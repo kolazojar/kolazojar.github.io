@@ -46,7 +46,7 @@
     \mathop{\max}\limits_{x}\frac{x^TAx}{x^TBx}.
 \end{equation}</div>
 <p>
-We will show that the rayleigh quotient problem in <span class="math">\((\ref{problem-statement})\)</span> is maximized whenever <span class="math">\(x\)</span> is collinear to the eigenvector of <span class="math">\(B^{-1}A\)</span> that corresponds its largest&nbsp;eigenvalue.</p>
+We will show that the rayleigh quotient problem in (\ref{problem-statement}) is maximized whenever <span class="math">\(x\)</span> is collinear to the eigenvector of <span class="math">\(B^{-1}A\)</span> that corresponds its largest&nbsp;eigenvalue.</p>
 <p>Since <span class="math">\(B\)</span> is symmetric, we know that there exists an orthonormal matrix <span class="math">\(P\in\mathbb{R}^{d\times d}\)</span> and a diagonal matrix <span class="math">\(D\in\mathbb{R}^{d\times d}\)</span> such that <span class="math">\(B=PDP^T\)</span>. Furthermore, since <span class="math">\(B\)</span> is also invertible and positive semi-definite, we know that the diagonal entries of <span class="math">\(D\)</span>, i.e., the eigenvalues of <span class="math">\(B\)</span>, are positive and non-zero. Consequently, the matrix <span class="math">\(B^{-\frac{1}{2}}\)</span> exists, and we can use the invertible&nbsp;substitution 
 </p>
 <div class="math">\begin{equation}
@@ -61,7 +61,7 @@ to&nbsp;yield
     \mathop{\max}\limits_{x}\frac{x^TAx}{x^TBx}=\mathop{\max}\limits_{w}\frac{w^TB^{-\frac{1}{2}}AB^{-\frac{1}{2}}w}{w^Tw}.
 \end{equation}</div>
 <p>
-Now we can observe that <span class="math">\((\ref{sub-problem})\)</span> is invariant to the norm of <span class="math">\(w\)</span>,&nbsp;so 
+Now we can observe that (\ref{sub-problem}) is invariant to the norm of <span class="math">\(w\)</span>,&nbsp;so
 </p>
 <div class="math">\begin{equation}
     \label{sub-sub-problem}
@@ -93,14 +93,14 @@ Since <span class="math">\(V\)</span> is orthonormal, we have <span class="math"
     \frac{\lambda_1}{\lambda^*}\left(w^Tv_1\right)^2+\frac{\lambda_2}{\lambda^*}\left(w^Tv_2\right)^2+\dots+\frac{\lambda_{d-1}}{\lambda^*}\left(w^Tv_{d-1}\right)^2+\left(w^Tv_d\right)^2\leq 1.
 \end{equation}</div>
 <p>
-It follows from <span class="math">\((\ref{ortho})\)</span>&nbsp;that
+It follows from (\ref{ortho})&nbsp;that
 </p>
 <div class="math">\begin{equation}
     \label{almost-done}
     \sum_{i=1}^d\lambda_i\left(w^Tv_i\right)^2\leq \lambda^*.
 \end{equation}</div>
-<p>Clearly, <span class="math">\(\sum_{i=1}^d\left(w^Tv_i\right)^2\lambda_i=\lambda^*\)</span> if and only if <span class="math">\(w\)</span> is collinear to the eigenvector of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> that corresponds to the largest eigenvalue. Hence, under these conditions, we have maximized <span class="math">\((\ref{sub-problem})\)</span>.</p>
-<p>Using the substitution in <span class="math">\((\ref{sub})\)</span>, a solution to <span class="math">\((\ref{sub-problem})\)</span> can be translated into a solution to <span class="math">\((\ref{problem-statement})\)</span>. Suppose that <span class="math">\(w\)</span> and <span class="math">\(\lambda\)</span> are set to be any eigenpair of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span>,&nbsp;then
+<p>Clearly, <span class="math">\(\sum_{i=1}^d\left(w^Tv_i\right)^2\lambda_i=\lambda^*\)</span> if and only if <span class="math">\(w\)</span> is collinear to the eigenvector of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> that corresponds to the largest eigenvalue. Hence, under these conditions, we have maximized&nbsp;(\ref{sub-problem}).</p>
+<p>Using the substitution in (\ref{sub}), a solution to (\ref{sub-problem}) can be translated into a solution to (\ref{problem-statement}). Suppose that <span class="math">\(w\)</span> and <span class="math">\(\lambda\)</span> are set to be any eigenpair of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span>,&nbsp;then
 </p>
 <div class="math">\begin{align}
     B^{-\frac{1}{2}}AB^{-\frac{1}{2}}w&amp;=\lambda w\\
@@ -108,7 +108,7 @@ It follows from <span class="math">\((\ref{ortho})\)</span>&nbsp;that
     B^{-1}Ax&amp;=\lambda x.
 \end{align}</div>
 <p>
-We have just shown that any eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also an eigenvalue of <span class="math">\(B^{-1}A\)</span>. Since the later two matrices have the same rank, which is simply equal to the rank of <span class="math">\(A\)</span>, we can conclude that they have the same set of eigenvalues. Accordingly, <span class="math">\((\ref{sub})\)</span> gives us a one-to-one correspondence between their eigenvectors. Thus, the maximum eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also the maximum eigenvalue of <span class="math">\(B^{-1}A\)</span>. So if <span class="math">\(w^*\)</span> is a solution to <span class="math">\((\ref{sub-problem})\)</span>, then <span class="math">\(x^*=B^{-\frac{1}{2}}w^*\)</span> is a solution to <span class="math">\((\ref{problem-statement})\)</span>. Hence, <span class="math">\((\ref{problem-statement})\)</span> is maximized when <span class="math">\(x\)</span> is collinear to the eigenvector of <span class="math">\(B^{-1}A\)</span> that corresponds to its largest eigenvector. This completes the&nbsp;proof!</p>
+We have just shown that any eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also an eigenvalue of <span class="math">\(B^{-1}A\)</span>. Since the later two matrices have the same rank, which is simply equal to the rank of <span class="math">\(A\)</span>, we can conclude that they have the same set of eigenvalues. Accordingly, (\ref{sub}) gives us a one-to-one correspondence between their eigenvectors. Thus, the maximum eigenvalue of <span class="math">\(B^{-\frac{1}{2}}AB^{-\frac{1}{2}}\)</span> is also the maximum eigenvalue of <span class="math">\(B^{-1}A\)</span>. So if <span class="math">\(w^*\)</span> is a solution to (\ref{sub-problem}), then <span class="math">\(x^*=B^{-\frac{1}{2}}w^*\)</span> is a solution to (\ref{problem-statement}). Hence, (\ref{problem-statement}) is maximized when <span class="math">\(x\)</span> is collinear to the eigenvector of <span class="math">\(B^{-1}A\)</span> that corresponds to its largest eigenvector. This completes the&nbsp;proof!</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -174,7 +174,7 @@ We have just shown that any eigenvalue of <span class="math">\(B^{-\frac{1}{2}}A
 </div>
             <hr>
             <footer>
-                <p>&copy; Copyright 2021 Matt Krol. Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.</p>
+                <p>&copy; Copyright 2021 Matt Krol. This website is powered by <a href="https://getpelican.com/">Pelican</a> and hosted via <a href="https://pages.github.com/">GitHub Pages</a>.</p>
             </footer>
         </div>
     </body>
