@@ -71,8 +71,6 @@ MARKDOWN = {
 TYPOGRIFY = True
 TYPOGRIFY_DASHES = 'oldschool'
 
-PLUGINS = ['sitemap']
-
 SITEMAP = {
     'format': 'xml',
     'priorities': {
