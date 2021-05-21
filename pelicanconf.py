@@ -50,7 +50,11 @@ ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
 DIRECT_TEMPLATES = ['index', 'categories', 'tags', 'archives']
 
 # Static paths for images, pdfs, etc.
-STATIC_PATHS = ['images', 'pdfs']
+STATIC_PATHS = ['images', 'pdfs', 'extra/robots.txt']
+
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt' : { 'path' : 'robots.txt' }
+}
 
 # Markdown settings.
 MARKDOWN = {
@@ -66,3 +70,19 @@ MARKDOWN = {
 # Typogrify settings.
 TYPOGRIFY = True
 TYPOGRIFY_DASHES = 'oldschool'
+
+PLUGINS = ['sitemap']
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.6,
+        'indexes': 0.5,
+        'pages': 0.4
+    },
+    'changefreqs': {
+        'articles': 'weekly',
+        'indexes': 'weekly',
+        'pages': 'monthly'
+    }
+}
